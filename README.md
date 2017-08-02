@@ -14,7 +14,7 @@ MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and 
 
 ## Installation
 
-You will need to install MojangSharp by [downloading it](https://github.com/hawezo/MojangSharp/archive/master.zip) or [installing it from NuGet](https://www.nuget.org/packages/Hawezo.MojangSharp).
+You will need to install MojangSharp by [downloading it](https://github.com/hawezo/MojangSharp/archive/master.zip) or [installing it from NuGet](https://www.nuget.org/packages/Hawezo.MojangSharp) with `MS> Install-Package Hawezo.MojangSharp`.
 
 ## Usage
 
