@@ -1,6 +1,6 @@
 # MojangSharp
 
-MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and [Mojang Authentication API](wiki.vg/Authentication).
+MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and [Mojang Authentication API](http://wiki.vg/Authentication).
 
 # Features
 
