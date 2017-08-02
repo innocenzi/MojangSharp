@@ -61,6 +61,8 @@ You can check after an authentication request if the Client Token is the same as
 
 ### Skins
 
+**Warning** - Please perform your own tests for all skin-related endpoints, this feature has not been tested (but the requests work so it is likely working).
+
 You can change or reset a skin with MojangSharp. To change a skin, you can either call `UploadSkin` endpoint to upload a skin to the Mojang's servers, or call `ChangeSkin` with an URL to the skin you want to change to.
 
 ```csharp
