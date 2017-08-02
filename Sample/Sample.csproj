@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9149A282-94B0-4E95-9A88-CBFD98FBE795}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MojangSharp</RootNamespace>
-    <AssemblyName>MojangSharp</AssemblyName>
+    <ProjectGuid>{D3D58681-3092-40E4-A3D4-1FBA2FAF8B16}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sample</RootNamespace>
+    <AssemblyName>Sample</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,18 +23,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MojangSharp.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,33 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\Requester.cs" />
-    <Compile Include="Api\Uuid.cs" />
-    <Compile Include="Endpoints\Authentication.cs" />
-    <Compile Include="Endpoints\BlockedServers.cs" />
-    <Compile Include="Endpoints\ChangeSkin.cs" />
-    <Compile Include="Endpoints\NameHistory.cs" />
-    <Compile Include="Endpoints\Profile.cs" />
-    <Compile Include="Endpoints\ResetSkin.cs" />
-    <Compile Include="Endpoints\Statistics.cs" />
-    <Compile Include="Endpoints\UploadSkin.cs" />
-    <Compile Include="Endpoints\UuidByNames.cs" />
-    <Compile Include="Responses\AuthenticationResponses.cs" />
-    <Compile Include="Responses\BlockedServersResponse.cs" />
-    <Compile Include="Responses\NameHistoryResponse.cs" />
-    <Compile Include="Responses\ProfileResponses.cs" />
-    <Compile Include="Responses\Response.cs" />
-    <Compile Include="Endpoints\ApiStatus.cs" />
-    <Compile Include="Endpoints\IEndpoint.cs" />
-    <Compile Include="Endpoints\UuidAtTime.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Responses\ApiStatusResponse.cs" />
-    <Compile Include="Responses\StatisticsResponse.cs" />
-    <Compile Include="Responses\UuidAtTimeResponse.cs" />
-    <Compile Include="Responses\UuidByNamesResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MojangSharp\MojangSharp.csproj">
+      <Project>{9149a282-94b0-4e95-9a88-cbfd98fbe795}</Project>
+      <Name>MojangSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
