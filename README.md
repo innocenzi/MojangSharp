@@ -79,8 +79,8 @@ Mojang has a list of actually blocked addresses, which are SHA1-hashed. Some of 
 ```csharp
 BlockedServersResponse servers = await new BlockedServers().PerformRequest();
 if (servers.IsSuccess) {
-    Console.WriteLine($"  {servers.BlockedServers.Count} blocked servers");
-    Console.WriteLine($"  {servers.BlockedServers.FindAll(x => x.Cracked).Count} cracked");
+    Console.WriteLine($"{servers.BlockedServers.Count} blocked servers");
+    Console.WriteLine($"{servers.BlockedServers.FindAll(x => x.Cracked).Count} cracked");
 }
 else { // You know what }
 ```
@@ -93,9 +93,9 @@ You can combine up to 4 statistics in the `Statistics` constructor, in which cas
 ```csharp
 StatisticsResponse stats = await new Statistics(Item.MinecraftAccountsSold).PerformRequest();
 if (stats.IsSuccess) {
-    Console.WriteLine($"  Total Minecraft accounts sold: {stats.Total}");
-    Console.WriteLine($"  Last 24h: {stats.Last24h}");
-    Console.WriteLine($"  Average sell/s: {stats.SaleVelocity}");
+    Console.WriteLine($"Total Minecraft accounts sold: {stats.Total}");
+    Console.WriteLine($"Last 24h: {stats.Last24h}");
+    Console.WriteLine($"Average sell/s: {stats.SaleVelocity}");
 } else { // Handle your errors }
 ```
 
