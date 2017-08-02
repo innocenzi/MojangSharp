@@ -15,6 +15,9 @@ namespace MojangSharp.Responses
         /// </summary>
         public List<BlockedServer> BlockedServers { get; internal set; }
 
+        /// <summary>
+        /// Blocked Server response contents
+        /// </summary>
         public class BlockedServer
         {
 

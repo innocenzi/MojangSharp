@@ -102,8 +102,7 @@ namespace Sample
                 }
             }
             else
-                WriteColoredLine(ConsoleColor.Red, uuids.Error.ErrorMessage != null ? uuids.Error.ErrorMessage :
-                                                   uuids.Error.Exception.Message);
+                WriteColoredLine(ConsoleColor.Red, uuids.Error.ErrorMessage ?? uuids.Error.Exception.Message);
 
             // Profile
             WriteColoredLine(ConsoleColor.DarkCyan, "\n[Get] Gets Hawraith's profile");
@@ -119,8 +118,7 @@ namespace Sample
                 Console.WriteLine($"    Cape: none");
             }
             else
-                WriteColoredLine(ConsoleColor.Red, profile.Error.ErrorMessage != null ? profile.Error.ErrorMessage :
-                                                   profile.Error.Exception.Message);
+                WriteColoredLine(ConsoleColor.Red, profile.Error.ErrorMessage ?? profile.Error.Exception.Message);
 
             // Upload skin
             //http://i.imgur.com/OdTEea8.png
@@ -145,8 +143,7 @@ namespace Sample
                 Console.WriteLine($"  {servers.BlockedServers.FindAll(x => x.Cracked).Count} cracked");
             }
             else
-                WriteColoredLine(ConsoleColor.Red, servers.Error.ErrorMessage != null ? servers.Error.ErrorMessage :
-                                                   servers.Error.Exception.Message);
+                WriteColoredLine(ConsoleColor.Red, servers.Error.ErrorMessage ?? servers.Error.Exception.Message);
 
 
             // Stats
@@ -159,8 +156,7 @@ namespace Sample
                 Console.WriteLine($"  Average sell/s: {stats.SaleVelocity}");
             }
             else
-                WriteColoredLine(ConsoleColor.Red, stats.Error.ErrorMessage != null ? stats.Error.ErrorMessage :
-                                                   stats.Error.Exception.Message);
+                WriteColoredLine(ConsoleColor.Red, stats.Error.ErrorMessage ?? stats.Error.Exception.Message);
 
 
             Console.Read();

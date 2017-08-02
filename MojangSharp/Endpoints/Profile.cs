@@ -9,17 +9,23 @@ using static MojangSharp.Responses.ProfileResponse;
 namespace MojangSharp.Endpoints
 {
 
+    /// <summary>
+    /// Profile request class
+    /// </summary>
     public class Profile : IEndpoint<ProfileResponse>
     {
-
         // TODO RATE LIMIT
 
+        /// <summary>
+        /// Applies unsigned setting to the request
+        /// </summary>
         public bool Unsigned { get; private set; }
 
         /// <summary>
         /// Returns player's username and additional informations
         /// </summary>
-        /// <param name="uuid"></param>
+        /// <param name="uuid">Player UUID</param>
+        /// <param name="unsigned"></param>
         public Profile(string uuid, bool unsigned = true)
         {
             this.Unsigned = unsigned;

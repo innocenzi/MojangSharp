@@ -11,7 +11,11 @@ using System.Threading.Tasks;
 
 namespace MojangSharp.Api
 {
-    internal static class Requester
+
+    /// <summary>
+    /// Requester class, performs all the requests.
+    /// </summary>
+    public static class Requester
     {
 
         /// <summary>
@@ -42,7 +46,7 @@ namespace MojangSharp.Api
         /// <summary>
         /// Represents the http client used in the web requests.
         /// </summary>
-        public static HttpClient Client
+        internal static HttpClient Client
         {
             get
             {
@@ -61,7 +65,7 @@ namespace MojangSharp.Api
         /// Sends a GET request to the given endpoint.
         /// </summary>
         /// <typeparam name="T">Type of the return response</typeparam>
-        public async static Task<Response> Get<T>(IEndpoint<T> endpoint)
+        internal async static Task<Response> Get<T>(IEndpoint<T> endpoint)
         {
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");
@@ -106,7 +110,7 @@ namespace MojangSharp.Api
         /// Sends a POST request to the given endpoint.
         /// </summary>
         /// <typeparam name="T">Type of the return response</typeparam>
-        public async static Task<Response> Post<T>(IEndpoint<T> endpoint)
+        internal async static Task<Response> Post<T>(IEndpoint<T> endpoint)
         {
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");
@@ -154,7 +158,7 @@ namespace MojangSharp.Api
         /// <summary>
         /// Sends a POST request to the given endpoint.
         /// </summary>
-        public async static Task<Response> Post<T>(IEndpoint<T> endpoint, Dictionary<string, string> toEncode)
+        internal async static Task<Response> Post<T>(IEndpoint<T> endpoint, Dictionary<string, string> toEncode)
         {
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");
@@ -222,7 +226,7 @@ namespace MojangSharp.Api
         /// <summary>
         /// Sends a PUT request to the given endpoint.
         /// </summary>
-        public async static Task<Response> Put<T>(IEndpoint<T> endpoint, FileInfo file)
+        internal async static Task<Response> Put<T>(IEndpoint<T> endpoint, FileInfo file)
         {
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");
@@ -297,11 +301,11 @@ namespace MojangSharp.Api
                 Error = error
             };
         }
-        
+
         /// <summary>
         /// Sends a DELETE request to the given endpoint.
         /// </summary>
-        public async static Task<Response> Delete<T>(IEndpoint<T> endpoint)
+        internal async static Task<Response> Delete<T>(IEndpoint<T> endpoint)
         {
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");

@@ -3,13 +3,15 @@ using MojangSharp.Responses;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
+
+    /// <summary>
+    /// Statistics requets class
+    /// </summary>
     public class Statistics : IEndpoint<StatisticsResponse>
     {
 
@@ -28,6 +30,10 @@ namespace MojangSharp.Endpoints
                 this.Arguments.Add(Statistics.StatisticItems[item]);
         }
 
+        /// <summary>
+        /// Performs a statistic request
+        /// </summary>
+        /// <returns></returns>
         public async override Task<StatisticsResponse> PerformRequest()
         {
             this.PostContent = "{ \"metricKeys\": [" + string.Join(",", this.Arguments.ConvertAll(x => $"\"{x.ToString()}\"").ToArray()) + "]}";

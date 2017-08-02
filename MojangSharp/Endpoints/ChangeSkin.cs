@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
+
+    /// <summary>
+    /// Changes a player's skin from an url
+    /// </summary>
     public class ChangeSkin : IEndpoint<Response>
     {
         /// <summary>
         /// Creates a change skin request with a given UUID.
         /// </summary>
+        /// <param name="accessToken">User Access Token</param>
         /// <param name="uuid">UUID of the player.</param>
         /// <param name="skinUrl">URL of the skin.</param>
         /// <param name="slim">Defines if slim model is used.</param>

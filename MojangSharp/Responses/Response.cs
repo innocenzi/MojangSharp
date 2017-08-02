@@ -3,15 +3,35 @@ using System.Net;
 
 namespace MojangSharp
 {
+
+    /// <summary>
+    /// Default response class, can be inherited.
+    /// </summary>
     public class Response
     {
+
+        /// <summary>
+        /// Status code of the response.
+        /// </summary>
         public HttpStatusCode Code { get; internal set; }
+
+        /// <summary>
+        /// Defines weither or note the request is a success.
+        /// </summary>
         public bool IsSuccess { get; internal set; }
+
+        /// <summary>
+        /// Response's raw message contents.
+        /// </summary>
         public string RawMessage { get; internal set; }
+
+        /// <summary>
+        /// Contains an error if the request failed.
+        /// </summary>
         public Error Error { get; internal set; }
 
-        public Response() { }
-        public Response(Response response) : this()
+        internal Response() { }
+        internal Response(Response response) : this()
         {
             this.Code = response.Code;
             this.IsSuccess = response.IsSuccess;
@@ -20,6 +40,9 @@ namespace MojangSharp
         }
     }
 
+    /// <summary>
+    /// Default error class.
+    /// </summary>
     public class Error
     {
         /// <summary>

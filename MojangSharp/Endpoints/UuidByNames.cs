@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
+    /// <summary>
+    /// UuidByName requests class
+    /// </summary>
     public class UuidByNames : IEndpoint<UuidByNamesResponse>
     {
         /// <summary>
@@ -33,7 +36,10 @@ namespace MojangSharp.Endpoints
             this.Arguments = usernames.ToList<string>();
         }
         
-
+        /// <summary>
+        /// Performs an UuidByNames request.
+        /// </summary>
+        /// <returns></returns>
         public async override Task<UuidByNamesResponse> PerformRequest()
         {
             this.PostContent = "[" + string.Join(",", this.Arguments.ConvertAll(x => $"\"{x.ToString()}\"").ToArray()) + "]";

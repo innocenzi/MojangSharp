@@ -7,6 +7,9 @@ using System.Net;
 
 namespace MojangSharp.Endpoints
 {
+    /// <summary>
+    /// Api Status request class
+    /// </summary>
     public class ApiStatus : IEndpoint<ApiStatusResponse>
     {
 

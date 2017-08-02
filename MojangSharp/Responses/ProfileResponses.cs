@@ -4,6 +4,10 @@ using System;
 
 namespace MojangSharp.Responses
 {
+
+    /// <summary>
+    /// Profile response class
+    /// </summary>
     public class ProfileResponse : Response
     {
         internal ProfileResponse(Response response) : base(response) { }

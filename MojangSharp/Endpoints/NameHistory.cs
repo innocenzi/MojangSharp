@@ -23,6 +23,10 @@ namespace MojangSharp.Endpoints
             this.Address = new Uri($"https://api.mojang.com/user/profiles/{uuid}/names");
         }
 
+        /// <summary>
+        /// Performs a name history request.
+        /// </summary>
+        /// <returns></returns>
         public async override Task<NameHistoryResponse> PerformRequest()
         {
             this.Response = await Requester.Get(this);

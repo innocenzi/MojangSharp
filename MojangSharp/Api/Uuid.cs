@@ -15,6 +15,9 @@ namespace MojangSharp.Api
     public class Uuid
     {
 
+        /// <summary>
+        /// Instantiate an Uuid item.
+        /// </summary>
         public Uuid()
         {
             this.Legacy = false;

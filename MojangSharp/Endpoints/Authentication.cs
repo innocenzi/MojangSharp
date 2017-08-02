@@ -15,7 +15,14 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class Credentials
     {
+        /// <summary>
+        /// Username
+        /// </summary>
         public string Username { get; set; }
+
+        /// <summary>
+        /// Password
+        /// </summary>
         public string Password { get; set; }
     }
 
@@ -51,7 +58,6 @@ namespace MojangSharp.Endpoints
                                     new JProperty("requestUser", true)).ToString();
 
             this.Response = await Requester.Post(this);
-
             if (this.Response.IsSuccess)
             {
                 JObject user = JObject.Parse(this.Response.RawMessage);

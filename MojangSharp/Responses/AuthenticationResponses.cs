@@ -64,9 +64,15 @@ namespace MojangSharp.Responses
             /// </summary>
             public class Property
             {
+                /// <summary>
+                /// Property name
+                /// </summary>
                 [JsonProperty("name")]
                 public string Name { get; internal set; }
 
+                /// <summary>
+                /// Property value
+                /// </summary>
                 [JsonProperty("value")]
                 public string Value { get; internal set; }
             }
@@ -104,6 +110,9 @@ namespace MojangSharp.Responses
                 this.Cause = json["cause"].ToObject<string>();
         }
 
+        /// <summary>
+        /// Cause of this error (optional)
+        /// </summary>
         public string Cause { get; private set; }
     }
 

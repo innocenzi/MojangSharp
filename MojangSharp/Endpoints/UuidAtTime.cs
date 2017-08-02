@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 namespace MojangSharp.Endpoints
 {
 
+    /// <summary>
+    /// UuidAtTime request class
+    /// </summary>
     public class UuidAtTime : IEndpoint<UuidAtTimeResponse>
     {
 
@@ -25,6 +28,10 @@ namespace MojangSharp.Endpoints
             this.Arguments.Add(timespan.ToString());
         }
         
+        /// <summary>
+        /// Performs an UuidAtTime request.
+        /// </summary>
+        /// <returns></returns>
         public async override Task<UuidAtTimeResponse> PerformRequest()
         {
             this.Response = await Requester.Get(this);

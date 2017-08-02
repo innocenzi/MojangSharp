@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
+
+    /// <summary>
+    /// Upload Skin endpoint class
+    /// </summary>
     public class UploadSkin : IEndpoint<Response>
     {
 
@@ -20,8 +24,9 @@ namespace MojangSharp.Endpoints
         /// <summary>
         /// Creates a change skin request with a given UUID.
         /// </summary>
+        /// <param name="accessToken">Access Token of the player.</param>
         /// <param name="uuid">UUID of the player.</param>
-        /// <param name="skinUrl">URL of the skin.</param>
+        /// <param name="skin">Path to the skin.</param>
         /// <param name="slim">Defines if slim model is used.</param>
         public UploadSkin(string accessToken, string uuid, FileInfo skin, bool slim = false)
         {
