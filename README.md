@@ -1,14 +1,14 @@
-### MojangSharp
+# MojangSharp
 
 MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and [Mojang Authentication API](wiki.vg/Authentication).
 
-## Features
+# Features
 
 - Asynchronous API
 - All error and response types handled
 - Really easy to use
 
-### Getting started
+## Getting started
 
 [![GitHub version](https://badge.fury.io/gh/hawezo%2FMojangSharp.svg)](https://badge.fury.io/gh/hawezo%2FMojangSharp)  [![NuGet version](https://badge.fury.io/nu/MojangSharp.svg)](https://badge.fury.io/nu/MojangSharp)
 
@@ -20,7 +20,7 @@ You will need to install MojangSharp by [downloading it](https://github.com/hawe
 
 MojangSharp contains a `Endpoints` namespace which contains all of the possible actions. See the few examples below to understand their utilization:
 
-# ApiStatus
+### ApiStatus
 
 First, get `Response` object corresponding to the `Endpoint` you are using. In the case of `ApiStatus`, the `Response` object is `ApiStatusResponse`.
 Then, instantiate the `Endpoint` object and call its method asynchronous `PerformRequest()`.
@@ -42,7 +42,7 @@ Console.WriteLine($"Sessions: {status.Sessions}");
 ```
 
 
-# Authentication
+### Authentication
 
 Authentication's request type is the same as the other. You will need to instanciate a `Credentials` object containing the username and the password of the player you want to authenticate.
 Then, you will be able to perform the request and get an access token.
@@ -59,7 +59,7 @@ Note that `ClientToken` is an auto-generated token coming from the library. The 
 You can check after an authentication request if the Client Token is the same as the one stored in `Requester.ClientToken`. If not, there is probably an issue with your authentication structure.
 
 
-# Skins
+### Skins
 
 You can change or reset a skin with MojangSharp. To change a skin, you can either call `UploadSkin` endpoint to upload a skin to the Mojang's servers, or call `ChangeSkin` with an URL to the skin you want to change to.
 
@@ -70,7 +70,7 @@ if (skinUpload.IsSuccess) {
 } else { // Handle your errors }
 ```
 
-# Blocked servers
+### Blocked servers
 
 Mojang has a list of actually blocked addresses, which are SHA1-hashed. Some of them has been cracked by the community and are listed in MojangSharp.
 
@@ -83,7 +83,7 @@ if (servers.IsSuccess) {
 else { // You know what }
 ```
 
-# Statistics
+### Statistics
 
 Mojang offers an endpoint to get its statistics. Although there is not a lot of interest, it can somehow be useful.
 You can combine up to 4 statistics in the `Statistics` constructor, in which case the resulting numbers will be added to each other.
@@ -97,11 +97,11 @@ if (stats.IsSuccess) {
 } else { // Handle your errors }
 ```
 
-## Dependencies
+# Dependencies
 
 MojangSharp uses [Newtonsoft's JSON](https://github.com/JamesNK/Newtonsoft.Json) to parse Mojang's API responses.
 
-## To-do
+# To-do
 
 - [ ] Better error handling?
 - [ ] Add a [request limiter](http://wiki.vg/Mojang_API#Notes).
