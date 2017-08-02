@@ -4,9 +4,9 @@ MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and 
 
 ## Features
 
-- [ ] Asynchronous API
-- [ ] All error and response types handled
-- [ ] Really easy to use
+- Asynchronous API
+- All error and response types handled
+- Really easy to use
 
 ### Getting started
 
