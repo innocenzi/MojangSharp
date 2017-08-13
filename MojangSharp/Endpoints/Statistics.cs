@@ -47,7 +47,7 @@ namespace MojangSharp.Endpoints
                 {
                     Total = stats["total"].ToObject<int>(),
                     Last24h = stats["last24h"].ToObject<int>(),
-                    SaleVelocity = stats["saleVelocityPerSeconds"].ToObject<int>(),
+                    SaleVelocity = stats["saleVelocityPerSeconds"].ToObject<double>(),
                 };
             }
             else

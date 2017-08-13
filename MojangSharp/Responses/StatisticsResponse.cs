@@ -20,6 +20,6 @@
         /// <summary>
         /// Average sales by seconds
         /// </summary>
-        public int SaleVelocity { get; internal set; }
+        public double SaleVelocity { get; internal set; }
     }
 }
