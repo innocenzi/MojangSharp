@@ -1,6 +1,6 @@
 # MojangSharp
 
-MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and [Mojang Authentication API](wiki.vg/Authentication).
+MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and [Mojang Authentication API](http://wiki.vg/Authentication).
 
 # Features
 
@@ -10,11 +10,11 @@ MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and 
 
 ## Getting started
 
-[![GitHub version](https://badge.fury.io/gh/hawezo%2FMojangSharp.svg)](https://badge.fury.io/gh/hawezo%2FMojangSharp)  [![NuGet version](https://badge.fury.io/nu/MojangSharp.svg)](https://badge.fury.io/nu/MojangSharp)
+[![GitHub version](https://badge.fury.io/gh/hawezo%2FMojangSharp.svg)](https://badge.fury.io/gh/hawezo%2FMojangSharp)  [![NuGet version](https://badge.fury.io/nu/MojangSharp.svg)](https://badge.fury.io/nu/Hawezo.MojangSharp)
 
 ## Installation
 
-You will need to install MojangSharp by [downloading it](https://github.com/hawezo/MojangSharp/archive/master.zip) or [installing it from NuGet](https://www.nuget.org/packages/Hawezo.MojangSharp).
+You will need to install MojangSharp by [downloading it](https://github.com/hawezo/MojangSharp/archive/master.zip) or [installing it from NuGet](https://www.nuget.org/packages/Hawezo.MojangSharp) with `MS> Install-Package Hawezo.MojangSharp`.
 
 ## Usage
 
