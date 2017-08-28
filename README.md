@@ -10,7 +10,13 @@ MojangSharp is a C# wrapper for the [Mojang API](http://wiki.vg/Mojang_API) and 
 
 ## Getting started
 
-[![GitHub version](https://badge.fury.io/gh/hawezo%2FMojangSharp.svg)](https://badge.fury.io/gh/hawezo%2FMojangSharp)  [![NuGet version](https://badge.fury.io/nu/MojangSharp.svg)](https://badge.fury.io/nu/Hawezo.MojangSharp)
+[![GitHub version](https://badge.fury.io/gh/hawezo%2FMojangSharp.svg)](https://badge.fury.io/gh/hawezo%2FMojangSharp)
+[![GitHub release](https://img.shields.io/github/release/hawezo/MojangSharp.svg)](https://github.com/hawezo/MojangSharp)
+[![GitHub issues](https://img.shields.io/github/issues/hawezo/MojangSharp.svg)](https://github.com/hawezo/MojangSharp/issues)
+[![Github All Releases](https://img.shields.io/github/downloads/hawezo/MojangSharp/total.svg)](https://github.com/hawezo/MojangSharp)
+&nbsp;
+[![NuGet version](https://badge.fury.io/nu/MojangSharp.svg)](https://badge.fury.io/nu/Hawezo.MojangSharp)
+[![NuGet](https://img.shields.io/nuget/dt/Hawezo.MojangSharp.svg)](https://www.nuget.org/packages/Hawezo.MojangSharp)
 
 ## Installation
 
