@@ -22,7 +22,7 @@ You will need to install MojangSharp by [downloading it](https://github.com/hawe
 
 ## Usage
 
-MojangSharp contains a `Endpoints` namespace which contains all of the possible actions. See the few examples below to understand their utilization:
+MojangSharp contains a `Endpoints` namespace which contains all of the possible actions. See the few examples below to understand their usage:
 
 ### ApiStatus
 
@@ -61,6 +61,20 @@ if (auth.IsSuccess) {
 
 Note that `ClientToken` is an auto-generated token coming from the library. The first time it is used, you can decide to store it somewhere and thus be able to user the `Validate`, `Invalidate` and the other endpoints of the Authentication API.
 You can check after an authentication request if the Client Token is the same as the one stored in `Requester.ClientToken`. If not, there is probably an issue with your authentication structure.
+
+### Location
+
+Some endpoints use [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) to authenticate a player thanks to its access token, which is retrieved thanks to the `Authentication` endpoint.
+
+Sometimes, Mojang rejects a requests because it assumes the request is not secured due to its location. In order to determine if Mojang will accept these kind of requests, you will need to use the `SecureIP` endpoint.
+
+```csharp
+Response secured = new SecureIP(auth.AccessToken).PerformRequestAsync().Result;
+if (secured.IsSuccess)
+    // Mojang will likely accept requests coming from this IP :)
+else
+    // Mojang will reject further requests.
+```
 
 
 ### Skins
