@@ -38,7 +38,7 @@ namespace Sample
 
             // Authentication
             WriteColoredLine(ConsoleColor.DarkCyan, "\n[Post] Authenticate");
-            string u = "<name>@<provider>.com", p = "<password>";
+            string u = "<mail>@<provider>.com", p = "<password>";
             AuthenticateResponse auth = new Authenticate(new Credentials() { Username = u, Password = p }).PerformRequestAsync().Result;
             if (auth.IsSuccess)
             {

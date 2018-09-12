@@ -68,7 +68,7 @@ namespace MojangSharp.Endpoints
                     {
                         PlayerName = profile["name"].ToObject<string>(),
                         Value = profile["id"].ToObject<string>(),
-                        Legacy = (profile.ToString().Contains("legacy") ? profile["legacy"].ToObject<bool>() : false),
+                        Legacy = (profile.ToString().Contains("legacyProfile") ? profile["legacyProfile"].ToObject<bool>() : false),
                         Demo = null
                     });
 
@@ -81,7 +81,7 @@ namespace MojangSharp.Endpoints
                     {
                         PlayerName = user["selectedProfile"]["name"].ToObject<string>(),
                         Value = user["selectedProfile"]["id"].ToObject<string>(),
-                        Legacy = (user["selectedProfile"].ToString().Contains("legacy") ? user["selectedProfile"]["legacy"].ToObject<bool>() : false),
+                        Legacy = (user["selectedProfile"].ToString().Contains("legacyProfile") ? user["selectedProfile"]["legacyProfile"].ToObject<bool>() : false),
                         Demo = null
                     },
                     User = user["user"].ToObject<UserData>()
