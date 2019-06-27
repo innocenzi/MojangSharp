@@ -8,7 +8,7 @@ using static MojangSharp.Endpoints.Statistics;
 using static MojangSharp.Responses.ChallengesResponse;
 using static MojangSharp.Responses.NameHistoryResponse;
 
-namespace Sample
+namespace MojangSharp.Sample
 {
     internal class Program
     {
