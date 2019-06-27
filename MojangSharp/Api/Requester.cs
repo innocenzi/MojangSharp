@@ -56,7 +56,7 @@ namespace MojangSharp.Api
         /// <summary>
         /// Represents the http client used in the web requests.
         /// </summary>
-        internal static HttpClient Client
+        public static HttpClient Client
         {
             get
             {
