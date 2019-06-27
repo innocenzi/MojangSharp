@@ -1,22 +1,18 @@
-﻿using System;
-using System.Threading.Tasks;
-using MojangSharp.Api;
-using Newtonsoft.Json.Linq;
+﻿using MojangSharp.Api;
 using MojangSharp.Responses;
-using System.Net;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using static MojangSharp.Responses.ChallengesResponse;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Challenges request class
     /// </summary>
     public class Challenges : IEndpoint<ChallengesResponse>
     {
-
         /// <summary>
         /// Instantiates the endpoints which allows to get an user's challenges.
         /// </summary>

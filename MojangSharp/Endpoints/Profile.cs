@@ -8,7 +8,6 @@ using static MojangSharp.Responses.ProfileResponse;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Profile request class
     /// </summary>
@@ -51,14 +50,14 @@ namespace MojangSharp.Endpoints
 
                 return new ProfileResponse(this.Response)
                 {
-                     Uuid = new Uuid()
-                     {
-                         PlayerName = profile["name"].ToObject<string>(),
-                         Value = profile["id"].ToObject<string>(),
-                         Legacy = null,
-                         Demo = null,
-                     },
-                     Properties = new ProfileProperties(profile["properties"].ToObject<JArray>()[0]["value"].ToObject<string>())
+                    Uuid = new Uuid()
+                    {
+                        PlayerName = profile["name"].ToObject<string>(),
+                        Value = profile["id"].ToObject<string>(),
+                        Legacy = null,
+                        Demo = null,
+                    },
+                    Properties = new ProfileProperties(profile["properties"].ToObject<JArray>()[0]["value"].ToObject<string>())
                 };
             }
             else
@@ -73,5 +72,4 @@ namespace MojangSharp.Endpoints
             }
         }
     }
-
 }

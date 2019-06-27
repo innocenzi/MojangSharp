@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Statistics requets class
     /// </summary>
     public class Statistics : IEndpoint<StatisticsResponse>
     {
-
         /// <summary>
         /// Asks Mojang for its statistics about the given item
         /// </summary>
@@ -105,5 +103,4 @@ namespace MojangSharp.Endpoints
             ScrollsAccountsSold
         }
     }
-    
 }

@@ -9,7 +9,6 @@ using static MojangSharp.Responses.AuthenticateResponse;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Represents a couple of username and password for authentication purposes
     /// </summary>
@@ -31,7 +30,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class Authenticate : IEndpoint<AuthenticateResponse>
     {
-        
         /// <summary>
         /// Sends a request of authentication
         /// </summary>
@@ -107,7 +105,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class Refresh : IEndpoint<TokenResponse>
     {
-
         /// <summary>
         /// Refreshes the access token. Must be the same instance as authenticate.
         /// </summary>
@@ -148,7 +145,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class Validate : IEndpoint<Response>
     {
-
         /// <summary>
         /// Refreshes the access token. Must be the same instance as authenticate.
         /// </summary>
@@ -181,7 +177,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class Signout : IEndpoint<Response>
     {
-
         /// <summary>
         /// Refreshes the access token. Must be the same instance as authenticate.
         /// </summary>
@@ -215,7 +210,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class Invalidate : IEndpoint<Response>
     {
-
         /// <summary>
         /// Refreshes the access token. Must be the same instance as authenticate.
         /// </summary>
@@ -244,7 +238,4 @@ namespace MojangSharp.Endpoints
                 return new Response(Error.GetError(this.Response));
         }
     }
-
-
-
 }

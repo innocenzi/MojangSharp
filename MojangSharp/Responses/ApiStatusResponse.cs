@@ -1,6 +1,5 @@
 ﻿namespace MojangSharp.Responses
 {
-
     /// <summary>
     /// Contains all the status of Mojang services.
     /// </summary>
@@ -15,7 +14,6 @@
         /// </summary>
         public enum Status
         {
-
             /// <summary>
             /// Unable to retrieve the status. Either the API changed or the service is unavailable.
             /// </summary>
@@ -102,5 +100,4 @@
         /// </summary>
         public Status MojangApi { get; internal set; }
     }
-
 }

@@ -6,7 +6,6 @@ using static MojangSharp.Responses.BlockedServersResponse;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Gets a list of SHA1 hashes used to check blocked servers addresses
     /// Clients check the lowercase name, using the ISO-8859-1 charset, against this list.
@@ -20,7 +19,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class BlockedServers : IEndpoint<BlockedServersResponse>
     {
-
         /// <summary>
         /// Instance of BlockServer request class
         /// </summary>
@@ -48,5 +46,4 @@ namespace MojangSharp.Endpoints
                 return new BlockedServersResponse(Error.GetError(this.Response));
         }
     }
-
 }

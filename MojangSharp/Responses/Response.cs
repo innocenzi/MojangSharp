@@ -3,13 +3,11 @@ using System.Net;
 
 namespace MojangSharp
 {
-
     /// <summary>
     /// Default response class, can be inherited.
     /// </summary>
     public class Response
     {
-
         /// <summary>
         /// Status code of the response.
         /// </summary>
@@ -30,7 +28,10 @@ namespace MojangSharp
         /// </summary>
         public Error Error { get; internal set; }
 
-        internal Response() { }
+        internal Response()
+        {
+        }
+
         internal Response(Response response) : this()
         {
             this.Code = response.Code;
