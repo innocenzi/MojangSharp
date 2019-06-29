@@ -1,21 +1,18 @@
 ﻿using MojangSharp.Api;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MojangSharp.Responses
 {
-
     /// <summary>
     /// Response to an authenticate request
     /// </summary>
     public class AuthenticateResponse : Response
     {
-        internal AuthenticateResponse(Response response) : base(response) { }
+        internal AuthenticateResponse(Response response) : base(response)
+        {
+        }
 
         /// <summary>
         /// Access Token for this user
@@ -76,9 +73,7 @@ namespace MojangSharp.Responses
                 [JsonProperty("value")]
                 public string Value { get; internal set; }
             }
-
         }
-
     }
 
     /// <summary>
@@ -86,13 +81,14 @@ namespace MojangSharp.Responses
     /// </summary>
     public class TokenResponse : Response
     {
-        internal TokenResponse(Response response) : base(response) { }
+        internal TokenResponse(Response response) : base(response)
+        {
+        }
 
         /// <summary>
         /// Access token for this instance
         /// </summary>
         public string AccessToken { get; internal set; }
-
     }
 
     // ---
@@ -115,5 +111,4 @@ namespace MojangSharp.Responses
         /// </summary>
         public string Cause { get; private set; }
     }
-
 }

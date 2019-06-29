@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
@@ -35,7 +34,7 @@ namespace MojangSharp.Endpoints
             this.Address = new Uri($"https://api.mojang.com/profiles/minecraft");
             this.Arguments = usernames.ToList<string>();
         }
-        
+
         /// <summary>
         /// Performs an UuidByNames request.
         /// </summary>
@@ -76,5 +75,4 @@ namespace MojangSharp.Endpoints
             }
         }
     }
-
 }

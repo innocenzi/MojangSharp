@@ -1,20 +1,13 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MojangSharp.Api
 {
-
     /// <summary>
     /// Represents the UUID of a player and contains some more data such as its username and
     /// booleans indicating if its account is paid and/or migrated.
     /// </summary>
     public class Uuid
     {
-
         /// <summary>
         /// Instantiate an Uuid item.
         /// </summary>

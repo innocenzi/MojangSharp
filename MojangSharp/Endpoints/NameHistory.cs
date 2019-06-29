@@ -7,13 +7,11 @@ using static MojangSharp.Responses.NameHistoryResponse;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// UUID to name history endpoint.
     /// </summary>
     public class NameHistory : IEndpoint<NameHistoryResponse>
     {
-
         /// <summary>
         /// Return all the usernames the user has used in the past.
         /// </summary>
@@ -52,6 +50,4 @@ namespace MojangSharp.Endpoints
                 return new NameHistoryResponse(Error.GetError(this.Response));
         }
     }
-
-
 }

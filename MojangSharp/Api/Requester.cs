@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -13,13 +12,11 @@ using System.Threading.Tasks;
 
 namespace MojangSharp.Api
 {
-
     /// <summary>
     /// Requester class, performs all the requests.
     /// </summary>
     public static class Requester
     {
-
         /// <summary>
         /// Defines timeout for http requests.
         /// </summary>
@@ -53,12 +50,13 @@ namespace MojangSharp.Api
             }
             set { _clientToken = value; }
         }
+
         private static string _clientToken;
 
         /// <summary>
         /// Represents the http client used in the web requests.
         /// </summary>
-        internal static HttpClient Client
+        public static HttpClient Client
         {
             get
             {
@@ -71,6 +69,7 @@ namespace MojangSharp.Api
                 _client = value;
             }
         }
+
         private static HttpClient _client;
 
         /// <summary>
@@ -125,7 +124,6 @@ namespace MojangSharp.Api
                             error == null,
                 Error = error
             };
-
         }
 
         /// <summary>
@@ -188,7 +186,6 @@ namespace MojangSharp.Api
             if (toEncode == null || toEncode.Count < 1)
                 throw new ArgumentNullException("PostContent", "PostContent should not be null.");
 
-
             HttpResponseMessage httpResponse = null;
             Error error = null;
             string rawMessage = null;
@@ -226,7 +223,6 @@ namespace MojangSharp.Api
                         Exception = ex
                     };
                 }
-
             }
 
             return new Response()
@@ -259,7 +255,6 @@ namespace MojangSharp.Api
             if (!file.Exists)
                 throw new ArgumentException("Given file does not exist.");
 
-
             HttpResponseMessage httpResponse = null;
             Error error = null;
             string rawMessage = null;
@@ -270,7 +265,6 @@ namespace MojangSharp.Api
                 Requester.Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", endpoint.Arguments[0]);
                 Requester.Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("*/*"));
                 Requester.Client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("MojangSharp", "0.1"));
-                
 
                 using (var contents = new MultipartFormDataContent())
                 {
@@ -281,7 +275,6 @@ namespace MojangSharp.Api
                     rawMessage = await httpResponse.Content.ReadAsStringAsync();
                     httpResponse.EnsureSuccessStatusCode();
                 }
-
             }
             catch (Exception ex)
             {
@@ -305,7 +298,6 @@ namespace MojangSharp.Api
                         Exception = ex
                     };
                 }
-
             }
 
             return new Response()
@@ -332,7 +324,6 @@ namespace MojangSharp.Api
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");
 
-
             HttpResponseMessage httpResponse = null;
             Error error = null;
             string rawMessage = null;
@@ -347,7 +338,6 @@ namespace MojangSharp.Api
                 httpResponse = await Requester.Client.DeleteAsync(endpoint.Address);
                 rawMessage = await httpResponse.Content.ReadAsStringAsync();
                 httpResponse.EnsureSuccessStatusCode();
-
             }
             catch (Exception ex)
             {
@@ -371,7 +361,6 @@ namespace MojangSharp.Api
                         Exception = ex
                     };
                 }
-
             }
 
             return new Response()

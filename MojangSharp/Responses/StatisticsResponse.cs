@@ -5,7 +5,9 @@
     /// </summary>
     public class StatisticsResponse : Response
     {
-        internal StatisticsResponse(Response response) : base(response) { }
+        internal StatisticsResponse(Response response) : base(response)
+        {
+        }
 
         /// <summary>
         /// Total amount of sold

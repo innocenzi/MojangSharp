@@ -1,20 +1,14 @@
 ﻿using MojangSharp.Api;
-using MojangSharp.Responses;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Location secured IP request class
     /// </summary>
     public class SecureIP : IEndpoint<Response>
     {
-
         /// <summary>
         /// Instantiates the endpoints which allows to see if this IP is secured.
         /// </summary>

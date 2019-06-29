@@ -3,7 +3,6 @@ using System;
 
 namespace MojangSharp.Responses
 {
-
     /// <summary>
     /// Response containing the UUID of a player at the given time.
     /// </summary>
@@ -23,5 +22,4 @@ namespace MojangSharp.Responses
         /// </summary>
         public DateTime Date { get; internal set; }
     }
-
 }

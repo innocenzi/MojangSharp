@@ -4,13 +4,14 @@ using System;
 
 namespace MojangSharp.Responses
 {
-
     /// <summary>
     /// Profile response class
     /// </summary>
     public class ProfileResponse : Response
     {
-        internal ProfileResponse(Response response) : base(response) { }
+        internal ProfileResponse(Response response) : base(response)
+        {
+        }
 
         /// <summary>
         /// Player's UUID.
@@ -27,7 +28,6 @@ namespace MojangSharp.Responses
         /// </summary>
         public class ProfileProperties
         {
-
             /// <summary>
             /// Instantiate properties thanks to the base64 string
             /// </summary>
@@ -87,7 +87,6 @@ namespace MojangSharp.Responses
             /// Cape URI
             /// </summary>
             public Uri CapeUri { get; internal set; }
-
         }
     }
 

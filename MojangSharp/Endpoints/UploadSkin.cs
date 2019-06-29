@@ -1,21 +1,16 @@
 ﻿using MojangSharp.Api;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// Upload Skin endpoint class
     /// </summary>
     public class UploadSkin : IEndpoint<Response>
     {
-
         /// <summary>
         /// Chosen skin local path
         /// </summary>

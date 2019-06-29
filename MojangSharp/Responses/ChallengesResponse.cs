@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace MojangSharp.Responses
 {
-
     /// <summary>
     /// Contains the security questions and their answer's id
     /// </summary>

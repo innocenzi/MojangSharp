@@ -1,11 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using MojangSharp.Api;
-using Newtonsoft.Json.Linq;
+﻿using MojangSharp.Api;
 using MojangSharp.Responses;
-using System.Net;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
@@ -14,7 +12,6 @@ namespace MojangSharp.Endpoints
     /// </summary>
     public class ApiStatus : IEndpoint<ApiStatusResponse>
     {
-
         /// <summary>
         /// Instantiates the endpoints which allows to get Mojang's APIs status.
         /// </summary>
@@ -28,7 +25,7 @@ namespace MojangSharp.Endpoints
         /// </summary>
         public async override Task<ApiStatusResponse> PerformRequestAsync()
         {
-           this.Response = await Requester.Get(this);
+            this.Response = await Requester.Get(this);
 
             if (this.Response.IsSuccess)
             {
@@ -63,9 +60,6 @@ namespace MojangSharp.Endpoints
             }
             else
                 return new ApiStatusResponse(Error.GetError(this.Response));
-
         }
     }
-    
-
 }

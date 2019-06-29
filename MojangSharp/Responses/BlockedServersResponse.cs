@@ -8,7 +8,9 @@ namespace MojangSharp.Responses
     /// </summary>
     public class BlockedServersResponse : Response
     {
-        internal BlockedServersResponse(Response response) : base(response) { }
+        internal BlockedServersResponse(Response response) : base(response)
+        {
+        }
 
         /// <summary>
         /// List of the current blocked servers.
@@ -20,7 +22,6 @@ namespace MojangSharp.Responses
         /// </summary>
         public class BlockedServer
         {
-
             /// <summary>
             /// SHA1 address of the server
             /// </summary>

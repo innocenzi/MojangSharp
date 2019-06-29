@@ -1,5 +1,4 @@
-﻿using MojangSharp.Api;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -34,6 +33,7 @@ namespace MojangSharp
             }
             set { _arguments = value; }
         }
+
         private List<string> _arguments;
 
         /// <summary>

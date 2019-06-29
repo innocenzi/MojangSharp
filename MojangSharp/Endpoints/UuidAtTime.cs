@@ -2,18 +2,15 @@
 using MojangSharp.Responses;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace MojangSharp.Endpoints
 {
-
     /// <summary>
     /// UuidAtTime request class
     /// </summary>
     public class UuidAtTime : IEndpoint<UuidAtTimeResponse>
     {
-
         /// <summary>
         /// Instantiates the endpoints which allows to get a player's UUID at a certain time.
         /// <paramref name="username">Username of the player you want to get UUID's</paramref>
@@ -27,7 +24,7 @@ namespace MojangSharp.Endpoints
             this.Arguments.Add(username);
             this.Arguments.Add(timespan.ToString());
         }
-        
+
         /// <summary>
         /// Performs an UuidAtTime request.
         /// </summary>
@@ -39,7 +36,6 @@ namespace MojangSharp.Endpoints
             if (this.Response.IsSuccess)
             {
                 JObject uuid = JObject.Parse(this.Response.RawMessage);
-
 
                 // Fixing #6 - 13/04/2018
                 return new UuidAtTimeResponse(this.Response)
@@ -60,5 +56,4 @@ namespace MojangSharp.Endpoints
                 return new UuidAtTimeResponse(Error.GetError(this.Response));
         }
     }
-
 }

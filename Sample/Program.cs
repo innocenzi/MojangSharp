@@ -8,11 +8,11 @@ using static MojangSharp.Endpoints.Statistics;
 using static MojangSharp.Responses.ChallengesResponse;
 using static MojangSharp.Responses.NameHistoryResponse;
 
-namespace Sample
+namespace MojangSharp.Sample
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args) => new Program().PerformTests();
+        private static void Main(string[] args) => new Program().PerformTests();
 
         private void PerformTests()
         {
@@ -35,7 +35,6 @@ namespace Sample
             else
                 WriteColoredLine(ConsoleColor.Red, status.Error.Exception == null ? status.Error.ErrorMessage : status.Error.Exception.Message);
 
-
             // Authentication
             WriteColoredLine(ConsoleColor.DarkCyan, "\n[Post] Authenticate");
             string u = "<mail>@<provider>.com", p = "<password>";
@@ -48,8 +47,8 @@ namespace Sample
                 Console.WriteLine($"  Profile name: {auth.SelectedProfile.PlayerName}");
                 if (auth.User.Properties != null)
                     Console.WriteLine($"  Properties: {auth.User.Properties.Count}");
-                
-               Response v = new Validate(auth.AccessToken).PerformRequestAsync().Result;
+
+                Response v = new Validate(auth.AccessToken).PerformRequestAsync().Result;
                 if (v.IsSuccess)
                     WriteColoredLine(ConsoleColor.DarkGreen, "  Validated!");
                 else
@@ -77,7 +76,6 @@ namespace Sample
             }
             else
                 WriteColoredLine(ConsoleColor.Red, challenges.Error.Exception == null ? challenges.Error.ErrorMessage : challenges.Error.Exception.Message);
-
 
             // Uuid at time
             WriteColoredLine(ConsoleColor.DarkCyan, $"\n[Get] Getting current UUID for {auth.SelectedProfile.PlayerName}");
@@ -154,7 +152,6 @@ namespace Sample
                     WriteColoredLine(ConsoleColor.DarkYellow, "Skin change failed: " + skin.Error.ErrorMessage);
             }
 
-
             // Blocked servers
             WriteColoredLine(ConsoleColor.DarkCyan, "\n[Get] Gets blocked servers");
             BlockedServersResponse servers = new BlockedServers().PerformRequestAsync().Result;
@@ -165,7 +162,6 @@ namespace Sample
             }
             else
                 WriteColoredLine(ConsoleColor.Red, servers.Error.ErrorMessage ?? servers.Error.Exception.Message);
-
 
             // Stats
             WriteColoredLine(ConsoleColor.DarkCyan, "\n[Get] Gets stats for Minecraft");
@@ -182,7 +178,6 @@ namespace Sample
             WriteColoredLine(ConsoleColor.DarkGray, "\nPress any key to leave.");
             Console.Read();
         }
-
 
         #region Console
 
@@ -212,9 +207,6 @@ namespace Sample
             Console.ForegroundColor = currentColor;
         }
 
-        #endregion
-
-
-
+        #endregion Console
     }
 }
