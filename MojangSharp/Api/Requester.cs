@@ -244,16 +244,14 @@ namespace MojangSharp.Api
         /// <summary>
         /// Sends a PUT request to the given endpoint.
         /// </summary>
-        internal async static Task<Response> Put<T>(IEndpoint<T> endpoint, FileInfo file)
+        internal async static Task<Response> Put<T>(IEndpoint<T> endpoint, Uri file)
         {
             if (endpoint == null)
                 throw new ArgumentNullException("Endpoint", "Endpoint should not be null.");
 
-            if (file == null)
+            
+            if (file == null || string.IsNullOrEmpty(file.ToString()))
                 throw new ArgumentNullException("Skin", "No file given.");
-
-            if (!file.Exists)
-                throw new ArgumentException("Given file does not exist.");
 
             HttpResponseMessage httpResponse = null;
             Error error = null;
@@ -269,7 +267,9 @@ namespace MojangSharp.Api
                 using (var contents = new MultipartFormDataContent())
                 {
                     contents.Add(new StringContent(bool.Parse(endpoint.Arguments[1]) == true ? "true" : "false"), "model");
-                    contents.Add(new ByteArrayContent(File.ReadAllBytes(file.FullName)), "file", file.Name);
+                    using (WebClient wc = new WebClient()) {
+                        contents.Add(new ByteArrayContent(wc.DownloadData(file)), "file", Path.GetFileName(file.ToString()));
+                    }
 
                     httpResponse = await Requester.Client.PutAsync(endpoint.Address, contents);
                     rawMessage = await httpResponse.Content.ReadAsStringAsync();
