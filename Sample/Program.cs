@@ -144,7 +144,7 @@ namespace MojangSharp.Sample
             WriteColoredLine(ConsoleColor.Yellow, "Change skin? This will not work if you have not modified the source. :)");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
-                Response skin = new UploadSkin(auth.AccessToken, auth.SelectedProfile.Value, new FileInfo(@"C:\Path\To\Skin.png"), false)
+                Response skin = new UploadSkin(auth.AccessToken, auth.SelectedProfile.Value, new Uri(@"C:\Path\Or\URL\To\Skin.png"), false)
                     .PerformRequestAsync().Result;
                 if (skin.IsSuccess)
                     WriteColoredLine(ConsoleColor.DarkGreen, "Changed skin!");

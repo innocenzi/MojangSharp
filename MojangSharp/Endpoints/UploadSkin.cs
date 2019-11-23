@@ -14,7 +14,7 @@ namespace MojangSharp.Endpoints
         /// <summary>
         /// Chosen skin local path
         /// </summary>
-        public FileInfo Skin { get; internal set; }
+        public Uri Skin { get; internal set; }
 
         /// <summary>
         /// Creates a change skin request with a given UUID.
@@ -23,7 +23,7 @@ namespace MojangSharp.Endpoints
         /// <param name="uuid">UUID of the player.</param>
         /// <param name="skin">Path to the skin.</param>
         /// <param name="slim">Defines if slim model is used.</param>
-        public UploadSkin(string accessToken, string uuid, FileInfo skin, bool slim = false)
+        public UploadSkin(string accessToken, string uuid, Uri skin, bool slim = false)
         {
             this.Address = new Uri($"https://api.mojang.com/user/profile/{uuid}/skin");
             this.Arguments.Add(accessToken);
