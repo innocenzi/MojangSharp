@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MojangSharp", "MojangSharp\MojangSharp.csproj", "{9149A282-94B0-4E95-9A88-CBFD98FBE795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{D3D58681-3092-40E4-A3D4-1FBA2FAF8B16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\MojangSharp.Sample.csproj", "{D3D58681-3092-40E4-A3D4-1FBA2FAF8B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
